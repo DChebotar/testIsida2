@@ -1,0 +1,133 @@
+body{
+    background-size:cover;
+    overflow: hidden;
+}
+
+.MainDiv{
+    width: 70%;
+    height: 70%;
+    border: 2px solid black;
+    margin-left: 5%;
+}
+
+.AnalyzeDiv{
+    height: 20%;
+    width: 90%;
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+.ResultsDiv{
+    height: 80%;
+    width: 90%;
+    font-size: 18px;
+    margin-left: 5%;
+    overflow: hidden;
+}
+
+.TableDiv{
+    border: 1px solid black;
+    margin-top: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.FooterDiv{
+    height: 60px;
+    width: 100%;
+}
+
+label{
+    width: 100%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.InputClass{
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.button{
+   width: 200px;
+   height: 30px;
+   margin-top: 15px;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr{
+    width: 100%;
+}
+
+td{
+    overflow: hidden;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#MessageDiv{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.activeMessage{
+    opacity:1 !important;
+}
+
+.errorMessage{
+    color:red;
+}
+
+.positiveMessage{
+    color:green;
+}
+
+.warningMessage{
+    color:orange;
+}
+
+a{
+    cursor: pointer;
+    width: 100%;
+}
+
+a:link {
+    color: #0000d0;
+    padding: 2px;
+}
+a:hover {
+    background: #786b59;
+    color: #ffe;
+}
+
+#loadWaitDiv{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 999;
+    text-align: center;
+}
+
+#waitLabel{
+    color:#5e86a1;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+}
+
+.Spinner{
+    height: 300px;
+}
