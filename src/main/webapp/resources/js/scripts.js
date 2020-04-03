@@ -1,4 +1,4 @@
-//метод корректирует расположение элементов при загрузке страницы
+//функция корректирует расположение элементов при загрузке страницы
 function bodyLoad(){
     $('#mainDiv').css({"margin-left":($(window).width()-$('#mainDiv').width())/2});
     $('#mainDiv').css({"margin-top":($(window).height()-$('#mainDiv').height() - $('#MessageDiv').height())/2});
@@ -8,17 +8,18 @@ function bodyLoad(){
     $('#loadWaitDiv').css({"margin-top":($(window).height()-$('#loadWaitDiv').height())/2});
     $('.Spinner').css({"margin-top":($('#loadWaitDiv').height()-$('.Spinner').height())/2});
     $('#loadWaitDiv').hide();
+    $('.InputClass').focus();
 }
-//метод показывает "WaitingBox"
+//функция показывает "WaitingBox"
 function startWaitAjax(text){
     $('#loadWaitDiv').show();
     $('#waitLabel').text(text);
 }
-//метод скрывает "WaitingBox"
+//функция скрывает "WaitingBox"
 function stopWaitAjax(){
     $('#loadWaitDiv').hide();
 }
-//метод показывает сообщения
+//функция показывает сообщения
 var messageTimeout;
 function showMessage(msgType, message){
     var className = '';
@@ -52,11 +53,11 @@ function showMessage(msgType, message){
         },500);
     },msgTime);
 }
-//метод подставляет выбранную ссылку в поле поиска
+//функция подставляет выбранную ссылку в поле поиска
 function toFindInput(link){
     $('.InputClass').val($(link).text());
 }
-//метод валидирует введенный URL, отпраляет асинхронный запрос на сервер, обрабатывает ответ
+//функция валидирует введенный URL, отпраляет асинхронный запрос на сервер, обрабатывает ответ
 function analyze(){
     var expression = "^(https?://)(www\\.)?([-a-z0-9]{1,63}\\.)*?[a-z0-9][-a-z0-9]{0,61}[a-z0-9]\\.[a-z]{2,6}(/[-\\w@\\+\\.~#\\?&/=%]*)?$";
     var regex = new RegExp(expression);
@@ -93,7 +94,7 @@ function analyze(){
         }
     });
 }
-//метод очищает результаты поиска
+//функция очищает результаты поиска
 function clearResults(){
     $('#table').find('tbody').empty();
 }
